@@ -2,8 +2,9 @@ import pytest
 import requests
 
 def test_get():
+    nro_user = 13628
     #consumiendo api
-    response_get = requests.get('http://cursotesting.com.ar:3000/consultapersona/13626')
+    response_get = requests.get(f"http://cursotesting.com.ar:3000/consultapersona/{nro_user}")
     # url + nro puerto + endpoint + parametro
 
     print(response_get)
@@ -11,4 +12,4 @@ def test_get():
     print(response_data)
 
 if __name__ == "__main__":
-    pytest.main([__file__])    
+    pytest.main(["-s",__file__])    
