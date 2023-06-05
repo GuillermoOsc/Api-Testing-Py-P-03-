@@ -14,9 +14,9 @@ def test_post():
 # armado del conjunto de datos que contiene los valores a enviar para generar la nueva persona
 # se guarda en la variable “datos” y las llaves y las comas es para representarlo en formato json
     datos = {       
-        "nombre" : "Daniel",
-        "apellido" : "Perez",
-        "edad" : 43
+        "nombre" : "Nombre usuario2",
+        "apellido" : "Apellido usuario2",
+        "edad" : 30
     }
 
 #consumiento la api 
@@ -37,7 +37,7 @@ def test_post():
 
 #aserciones del test:
 
-    assert respuesta_post.status_code == 200,f"Devolvió el código: {respuesta_post.status_code}"
+    assert respuesta_post.status_code == 200,f"Código devuelto: {respuesta_post.status_code}"
 
 # chequeo que dentro del json devuelto se incluya un campo “id”
     assert "id" in respuesta_datos, "Error no devolvió el id"

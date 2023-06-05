@@ -3,7 +3,6 @@ import os
 import pytest
 import requests
 
-
 def test_get():
 
     # Obtengo la variable global que tiene el id de la persona dada de alt
@@ -18,8 +17,8 @@ def test_get():
 
     print(respuesta_datos)
 # aserciones del test:
-    assert respuesta_datos["nombre"] == "Daniel"
-    assert respuesta_datos["apellido"] == "Perez"
+    assert respuesta_datos["nombre"] == "Nombre usuario2"
+    assert respuesta_datos["apellido"] == "Apellido usuario2"
 
 if __name__ == "__main__":
     pytest.main(["-s", __file__])
